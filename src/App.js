@@ -5,6 +5,12 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import { Topbar, Sidebar } from "./screens/global/index";
 import { Routes, Route } from "react-router-dom";
 import Dashboard from "./screens/dashboard/Dashboard";
+import Team from "./screens/team/Team";
+import Contacts from "./screens/contacts/Contacts";
+import Invoices from "./screens/invoices/Invoices";
+import Form from "./screens/form/Form";
+import Calendar from "./screens/calendar/Calendar";
+import FAQ from "./screens/faq/FAQ";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -20,16 +26,16 @@ function App() {
             <Topbar setIsSidebar={setIsSidebar} />
             <Routes>
               <Route path="/" element={<Dashboard />} />
-              <Route path="/team" element={<Dashboard />} />
-              <Route path="/contacts" element={<Dashboard />} />
-              <Route path="/invoices" element={<Dashboard />} />
-              <Route path="/form" element={<Dashboard />} />
+              <Route path="/team" element={<Team />} />
+              <Route path="/contacts" element={<Contacts />} />
+              <Route path="/invoices" element={<Invoices />} />
+              <Route path="/form" element={<Form />} />
+              <Route path="/calendar" element={<Calendar />} />
+              <Route path="/faq" element={<FAQ />} />
               <Route path="/bar" element={<Dashboard />} />
               <Route path="/pie" element={<Dashboard />} />
               <Route path="/line" element={<Dashboard />} />
-              <Route path="/faq" element={<Dashboard />} />
               <Route path="/geography" element={<Dashboard />} />
-              <Route path="/calendar" element={<Dashboard />} />
             </Routes>
           </main>
         </div>

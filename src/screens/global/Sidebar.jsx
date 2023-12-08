@@ -65,7 +65,9 @@ const Sidebar = () => {
         <Menu iconShape="square">
           <MenuItem
             onClick={() => setIsCollapsed(!isCollapsed)}
-            icon={isCollapsed ? <MenuOutlined sx={{ color: "white" }} /> : undefined}
+            icon={
+              isCollapsed ? <MenuOutlined sx={{ color: "white" }} /> : undefined
+            }
             style={{
               margin: "10px 0 20px 0",
               color: colors.grey[100],
@@ -121,7 +123,11 @@ const Sidebar = () => {
             <Item
               title="Dashboard"
               to="/"
-              icon={<HomeOutlined />}
+              icon={
+                <HomeOutlined
+                  sx={{ color: selected === "Dashboard" ? null : "white" }}
+                />
+              }
               selected={selected}
               setSelected={setSelected}
             />
@@ -135,21 +141,37 @@ const Sidebar = () => {
             <Item
               title="Manage Team"
               to="/team"
-              icon={<PeopleOutlined sx={{ color: "white" }}/>}
+              icon={
+                <PeopleOutlined
+                  sx={{ color: selected === "Manage Team" ? null : "white" }}
+                />
+              }
               selected={selected}
               setSelected={setSelected}
             />
             <Item
               title="Contacts Information"
               to="/contacts"
-              icon={<ContactsOutlined sx={{ color: "white" }}/>}
+              icon={
+                <ContactsOutlined
+                  sx={{
+                    color: selected === "Contacts Information" ? null : "white",
+                  }}
+                />
+              }
               selected={selected}
               setSelected={setSelected}
             />
             <Item
               title="Invoices Balances"
               to="/invoices"
-              icon={<ReceiptOutlined sx={{ color: "white" }}/>}
+              icon={
+                <ReceiptOutlined
+                  sx={{
+                    color: selected === "Invoices Balances" ? null : "white",
+                  }}
+                />
+              }
               selected={selected}
               setSelected={setSelected}
             />
@@ -164,21 +186,33 @@ const Sidebar = () => {
             <Item
               title="Profile Form"
               to="/form"
-              icon={<PersonOutlined sx={{ color: "white" }}/>}
+              icon={
+                <PersonOutlined
+                  sx={{ color: selected === "Profile Form" ? null : "white" }}
+                />
+              }
               selected={selected}
               setSelected={setSelected}
             />
             <Item
               title="Calendar"
               to="/calendar"
-              icon={<CalendarTodayOutlined sx={{ color: "white" }}/>}
+              icon={
+                <CalendarTodayOutlined
+                  sx={{ color: selected === "Calendar" ? null : "white" }}
+                />
+              }
               selected={selected}
               setSelected={setSelected}
             />
             <Item
               title="FAQ Page"
               to="/faq"
-              icon={<HelpOutlineOutlined sx={{ color: "white" }}/>}
+              icon={
+                <HelpOutlineOutlined
+                  sx={{ color: selected === "FAQ Page" ? null : "white" }}
+                />
+              }
               selected={selected}
               setSelected={setSelected}
             />
@@ -193,28 +227,46 @@ const Sidebar = () => {
             <Item
               title="Bar Chart"
               to="/bar"
-              icon={<BarChartOutlined sx={{ color: "white" }}/>}
+              icon={
+                <BarChartOutlined
+                  sx={{ color: selected === "Bar Chart" ? null : "white" }}
+                />
+              }
               selected={selected}
               setSelected={setSelected}
             />
             <Item
               title="Pie Chart"
               to="/pie"
-              icon={<PieChartOutlineOutlined sx={{ color: "white" }}/>}
+              icon={
+                <PieChartOutlineOutlined
+                  sx={{ color: selected === "Pie Chart" ? null : "white" }}
+                />
+              }
               selected={selected}
               setSelected={setSelected}
             />
             <Item
               title="Line Chart"
               to="/line"
-              icon={<TimelineOutlined sx={{ color: "white" }}/>}
+              icon={
+                <TimelineOutlined
+                  sx={{ color: selected === "Line Chart" ? null : "white" }}
+                />
+              }
               selected={selected}
               setSelected={setSelected}
             />
             <Item
               title="Geography Chart"
               to="/geography"
-              icon={<MapOutlined sx={{ color: "white" }}/>}
+              icon={
+                <MapOutlined
+                  sx={{
+                    color: selected === "Geography Chart" ? null : "white",
+                  }}
+                />
+              }
               selected={selected}
               setSelected={setSelected}
             />
